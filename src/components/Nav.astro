@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+
+const navList = ["/", "books", "television", "education", "music"];
+
+const currentPath = new URL(Astro.request.url).pathname;
+---
+
+<header class="bg-gray-800">
+  <nav>
+    <ul class="flex gap-2 justify-around px-5 py-3">
+      {
+        navList.map((name) => (
+          <li class="px-2 py-1 rounded-md">
+            <a href={name}>
+              <Icon
+            name={`nav/${name === "/" ? "home" : name}`}
+                class={`text-3xl text-white ${currentPath === name ? "text-yellow-400" : ""}`}
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
