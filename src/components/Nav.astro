@@ -21,7 +21,7 @@ const currentPath = new URL(Astro.request.url).pathname;
             <a href={route}>
               <Icon
                 name={"nav/" + name}
-            class={`text-3xl text-white ${currentPath === route ? "text-purple-600" : ""}`}
+                class={`text-3xl text-white ${currentPath === route ? "accentColor" : ""}`}
               />
             </a>
           </li>
@@ -30,3 +30,9 @@ const currentPath = new URL(Astro.request.url).pathname;
     </ul>
   </nav>
 </header>
+
+<style>
+  .accentColor{
+    color: #9333EA; /* bg-purple-500 */
+  }
+</style>

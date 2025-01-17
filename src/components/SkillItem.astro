@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 const { color1, color2, name, hoverColor } = Astro.props;
 ---
 
-<div class="relative w-52">
+<div class="relative w-36">
   <!--?xml version="1.0" standalone="no"?-->
   <svg
     id="sw-js-blob-svg"
@@ -21,19 +21,18 @@ const { color1, color2, name, hoverColor } = Astro.props;
       d="M12.9,-18.4C17.6,-19.5,23,-18,23.2,-14.5C23.3,-11,18.2,-5.5,17.5,-0.4C16.7,4.6,20.3,9.2,20,12.5C19.8,15.8,15.6,17.7,11.6,17.7C7.6,17.6,3.8,15.6,0.3,15C-3.1,14.5,-6.3,15.4,-7.2,13.7C-8.1,11.9,-6.7,7.5,-10.1,4.8C-13.5,2.1,-21.7,1,-23.6,-1.1C-25.5,-3.3,-21.3,-6.6,-19.6,-12.2C-17.9,-17.9,-18.8,-25.9,-15.9,-25.9C-13.1,-25.9,-6.5,-17.8,-1.2,-15.7C4.1,-13.5,8.1,-17.3,12.9,-18.4Z"
       width="100%"
       height="100%"
-      transform="translate(52 50)"
+      transform="translate(50 50)"
       style="transition: 0.3s;"
       stroke-width="0"></path>
   </svg>
   <Icon
     name={"skills/" + name}
-    class={`absolute text-[80px] transition-colors duration-300 top-14 right-16 `}
+    class={`absolute hover:brightness-125 hover:scale-110 text-6xl transition-all duration-[400ms] top-10 right-12 `}
   />
 </div>
 
 <style define:vars={{ hoverColor }}>
-[data-icon]:hover{
-  color: var(--hoverColor);
+  [data-icon]:hover {
+    color: var(--hoverColor);
   }
 </style>
-
