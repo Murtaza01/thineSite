@@ -1,0 +1,11 @@
+---
+import type { GetStaticPaths } from "astro";
+import imgList from "../../assets/data/imgList";
+export const getStaticPaths = (() => {
+  return imgList.map(({ name }) => ({ params: { book: name } }));
+}) satisfies GetStaticPaths;
+
+const { book } = Astro.params;
+---
+
+<div>Book {book}</div>
