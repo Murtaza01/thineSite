@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from "astro";
+import imgList from "../assets/data/imgList";
+
+type pageImg = {
+  name: string;
+  path: ImageMetadata;
+};
+
+const { head, par } = Astro.props;
+const currentPath = new URL(Astro.request.url).pathname as keyof typeof imgList;
+const pageImg = imgList[currentPath];
+---
+
+<main class="py-5 space-y-3">
+  <h1 class="text-3xl font-heading font-bold capitalize text-center">
+    {head}
+  </h1>
+  <p class="font-heading text-center">{par}</p>
+  <div class="flex py-12 justify-around">
+    {
+      pageImg.map(({ name, path }: pageImg) => (
+        <a href={currentPath + "/" + name}>
+          <img
+            src={path.src}
+            class="w-40 h-60 shadow-xl rounded-sm shadow-black"
+            alt={name}
+            decoding="async"
+            loading="lazy"
+          />
+        </a>
+      ))
+    }
+  </div>
+</main>

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['Bonny', 'ui-serif', 'Georgia']
+        'heading': ['Charm', 'ui-serif', 'Georgia']
       }
     },
   },

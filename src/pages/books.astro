@@ -1,23 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import imgList from "../assets/data/imgList";
+import PageLayout from "../layouts/PageLayout.astro"
 ---
 
 <BaseLayout>
-  <h1>Here is all the books i've read</h1>
-  <div class="flex py-16 justify-around">
-    {
-      imgList.map(({ path, name }) => (
-      <a href={"books/"+name}>
-          <img
-            src={path.src}
-            class="w-40 h-60 shadow-xl rounded-sm shadow-black"
-            alt=""
-            decoding="async"
-            loading="lazy"
-          />
-        </a>
-      ))
-    }
-  </div>
+  <PageLayout head="thine site" par="Here is all the books i've read"/>
 </BaseLayout>
