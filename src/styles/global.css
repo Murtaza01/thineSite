@@ -12,8 +12,3 @@ html {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Bonny";
-  src: local("Bonny"), url("./Bonny-Bold.woff2") format("woff2");
-
-}
