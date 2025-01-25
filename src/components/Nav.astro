@@ -7,6 +7,7 @@ const navList = [
   { route: "/television", name: "television" },
   { route: "/education", name: "education" },
   { route: "/music", name: "music" },
+  { route: "/gallery", name: "gallery" },
 ];
 
 const currentPath = new URL(Astro.request.url).pathname;
@@ -32,7 +33,7 @@ const currentPath = new URL(Astro.request.url).pathname;
 </header>
 
 <style>
-  .accentColor{
-    color: #9333EA; /* bg-purple-500 */
+  .accentColor {
+    color: #9333ea; /* bg-purple-500 */
   }
 </style>
