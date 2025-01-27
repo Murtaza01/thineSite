@@ -1,0 +1,19 @@
+---
+import pagesList from "../assets/data/pagesList";
+import PageNavItem from "../components/PageNavItem.astro";
+---
+
+<section class="py-16 px-5 space-y-5">
+  <h2 class="font-heading text-3xl  text-center font-bold">Thine Stuff</h2>
+  <p class="text-center">
+    Along the years i've acclimated opinions about the things i hear, read, see
+  </p>
+  <div class="mt-6 gap-x-1 border-black
+    flex justify-center flex-wrap">
+    {
+      pagesList.map(({ title, bg }, index) => (
+        <PageNavItem title={title} bg={bg} index={index} />
+      ))
+    }
+  </div>
+</section>
